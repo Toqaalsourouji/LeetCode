@@ -8,3 +8,5 @@ class Solution:
             if compliment in hashmap: # to make our lives easier we take that compliment and check if its in the hashmap, if it is we return the index of that compliment 
                 return [hashmap[compliment], i]
             hashmap[num] = i # then we set the integer i which is the index in the list of indexes and return the answer 
+
+#Time complexity = O(n)
