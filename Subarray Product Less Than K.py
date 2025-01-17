@@ -3,11 +3,12 @@ class Solution:
         # initialize the left pointer to index 0 and the answer to 0
         # also the curr which is the current window should be 1 because we are multiplying each right index we add to the window to the current window and multiplying anything with 0 will remain 0. 
         left = ans = 0 
-        curr = 1
+        curr = 1 
 
        # handle edge cases where k is zero or if k is 1 and the nums array is all 1s 
         if k <= 1:
             return 0     
+            
         # logic of our sliding window, for every new right index we put in our window, multiply that int to what is in curr
         for right in range(len(nums)):
             curr *= nums[right]
