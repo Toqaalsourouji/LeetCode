@@ -1,0 +1,14 @@
+class Solution:
+    def reverseWords(self, s: str) -> str:
+        # Creat a string to hold the reversed words in because strings are immutable so we cant reverse the words in place 
+        S = []  
+        # We split the input strings into words so we can reverse each word
+        word = s.split()
+        # we iterate through the input string and for each word we reverse it and append to S 
+        for word in word:
+            S.append(word[::-1])
+        # when done, join the reversed words and return as a string 
+        return " ".join(S)    
+            
+# Time Complexity: O(n) ; because we iterate through the whole string input s of size n 
+# Space complexity: O(n) ; because we created a string S of size n 
